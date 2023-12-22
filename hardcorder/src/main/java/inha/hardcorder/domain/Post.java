@@ -1,5 +1,6 @@
 package inha.hardcorder.domain;
 
+import inha.hardcorder.dto.PostDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,4 +21,10 @@ public class Post {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
+
+    public Post(PostDto postDto){
+        this.id = postDto.getId();
+        this.title = postDto.getTitle();
+        this.content = postDto.getContent();
+    }
 }

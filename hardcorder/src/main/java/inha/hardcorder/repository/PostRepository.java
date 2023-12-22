@@ -1,10 +1,13 @@
 package inha.hardcorder.repository;
 
 import inha.hardcorder.domain.Post;
-import inha.hardcorder.domain.Quiz;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.Optional;
+
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
+    Optional<List<Post>> findByTitleContaining(String keyword);
 }

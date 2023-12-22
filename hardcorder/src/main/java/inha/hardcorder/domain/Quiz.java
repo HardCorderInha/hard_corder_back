@@ -21,6 +21,7 @@ public class Quiz {
 
     private String question;
     private String answer;
+    private String options;
 
     @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
     private List<MemberQuiz> memberQuizList = new ArrayList<>();

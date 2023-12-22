@@ -1,6 +1,5 @@
 package inha.hardcorder.domain;
 
-import inha.hardcorder.domain.mapping.MemberQuiz;
 import inha.hardcorder.domain.mapping.QuizCategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
